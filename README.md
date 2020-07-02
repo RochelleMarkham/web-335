@@ -2,5 +2,5 @@
 Introduction to NoSQL
 
 # Contributors
-Rochelle Markham - Bellevue University
+Rochelle Markham - Bellevue University/n
 Professor Krasso - Bellevue University
