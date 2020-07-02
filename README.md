@@ -1,2 +1,6 @@
-# web-335
-Repository for Web-335 NoSQL
+# Web-335
+Introduction to NoSQL
+
+# Contributors
+Rochelle Markham - Bellevue University
+Professor Krasso - Bellevue University
