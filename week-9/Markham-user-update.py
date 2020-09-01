@@ -1,9 +1,9 @@
 #=======================================
-# Title: User Service
+# Title: User Update
 # Author: Professor Krasso
 # Date: 8/31/20
 # Modified by: Rochelle Markham
-# Description: pymongo create & find
+# Description: pymongo update 
 #=======================================
 
 from pymongo import MongoClient
@@ -14,20 +14,17 @@ import datetime
 
 client = MongoClient('localhost', 27017)
 
-print(client)
-
 db = client.web335
 
-user = {
-    "first_name": "Lola",
-    "last_name": "Markham",
-    "email": "lmarkham@gmail.com", 
-    "employee_id": "0000008",
-    "date_created": datetime.datetime.utcnow()
-}
-
-user_id = db.users.insert_one(user).inserted_id
-
-print(user_id)
+db.users.update_one(
+        
+    {"employee_id": "0000008"},
+        
+    {
+        "$set": {
+            "email": "rmarkham@my365.bellevue.edu"
+        }
+    }
+)
 
 pprint.pprint(db.users.find_one({"employee_id": "0000008"}))
